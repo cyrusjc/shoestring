@@ -1,0 +1,53 @@
+.navBar{
+    background: #700000;
+    height: 90px;
+}
+
+.navBar_container{
+    height: 90px;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    
+    display: flex;
+}
+
+.navBar_menu {
+    flex-grow: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo_container {
+    height: 90px;
+}
+
+.logo{
+    height: 100%;
+}
+
+body{
+    /*background: #CFCFCF;*/
+    border: 0;
+    margin: 0;
+    font-family: Arial, "Montserrat";
+}
+.container{
+    border: 1px solid black;
+    margin: 20px auto;
+    max-width:1200px;
+    padding: 20px;
+    
+    box-sizing: border-box;
+}
+
+.navButt{
+    Color: #fff;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 18px;
+    border: 1px solid black;
+    margin: 5px 5px;
+    
+}
