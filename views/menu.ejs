@@ -1,14 +1,31 @@
+<!-- https://docs.google.com/spreadsheets/d/1zbPRvjDdmllUi1wYpUUL1ZN_jYVy1wJNgVSzMlkh8kw/edit#gid=0 -->
+
 <% include partials/header%>
 
-<div class="container">
+<div class="containerMenu">
+    <div class = "menu">
+        <% for(var i = 0;i<menu.length;i++){ %>
+            <% if(menu[i].length !== 0){ %>
+                <% if(menu[i][1] == undefined ){%>
+                    <div class ="header">
+                        <h2> <%= menu[i] %> </h2>  
+                        <hr class="s2">
+                    </div>
+                <% } else  if (menu[i][0] == "description"){ %>
+                            <div class = "description">
+                                <p> <%= menu[i][1]%> </p>
+                            </div>
+                <% } else{%>
+                    <div class = "item">
+                        <div class="dish_name"><%=menu[i][0] %></div>
+                        <div class="dish_description"><%=menu[i][1]%></div>
+                        <div class="dish_price"><%= menu[i][2]%></div>
+                    </div>
+                 <% }%> 
+            <% } %>
+        <% }%>      
+    </div>
 
-    <h1> Menu</h1>
-    <div>
-        <p> $5 Dick Sandwhich</p>
-    </div>
-    <div>
-        <p> $420 Tear water</p>
-    </div>
 </div>
 
 <% include partials/footer%>

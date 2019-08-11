@@ -1,25 +1,85 @@
+body{
+    /*background-i*/
+    /*background-size:cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-position: center center;*/
+    /*height: 100vh;*/
+    background-color: white;
+    border: 0;
+    margin: 0;
+    font-family: "Noto Serif JP";
+}
+.container{
+    /*border: 1px solid black;*/
+    margin: 0px auto;
+    max-width:1200px;
+    padding: 20px;
+    /*background: rgba(255,255,255,0.8);*/
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+/*.navBar_menu a{*/
+/*    font-family: "Source Serif";*/
+/*    font-size: 18px;*/
+/*    font-weight: 400;*/
+/*}*/
+
+/*.item .dish_name, .menu .header{*/
+/*    font-family: "Source Serif";*/
+/*}*/
+
+.item .dish_description{
+    font-family: "Open Sans";
+    font-style: italic;
+}
+
+.menu.header{
+    
+}
+
+
+/* ======================================================================== */
+/* ======================= NAVIGATION BAR CSS ============================= */
+/* ======================================================================== */
 .navBar{
-    background: #700000;
-    height: 90px;
+    background: white;
+    transition: 0.2s all;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .navBar_container{
-    height: 90px;
     margin: 0 auto;
     max-width: 1200px;
-
-    
-    display: flex;
+    text-align: center;
 }
 
 .navBar_menu {
     flex-grow: 3;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 
+.navButt{
+    Color: black;
+    padding: 5px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 5px 5px;
+    font-weight: 700;
+
+}
+
+
 .logo_container {
+    padding: auto auto;
     height: 90px;
 }
 
@@ -27,27 +87,263 @@
     height: 100%;
 }
 
-body{
-    /*background: #CFCFCF;*/
-    border: 0;
+p{
     margin: 0;
-    font-family: Arial, "Montserrat";
 }
-.container{
-    border: 1px solid black;
-    margin: 20px auto;
-    max-width:1200px;
-    padding: 20px;
-    
-    box-sizing: border-box;
+/* ======================================================================== */
+/* =======================     FOOTER       ============================= */
+/* ======================================================================== */
+#footer{
+    color: black;
+    background-color:  white;
+    margin: 0;
+    padding: 0;
 }
 
-.navButt{
-    Color: #fff;
-    padding: 5px 5px;
-    text-decoration: none;
-    font-size: 18px;
-    border: 1px solid black;
-    margin: 5px 5px;
+.footer-grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.infoGroup{
+    display: flex;
+    flex-grow: 1;
+    /*width: 100%;*/
+    /*justify-content: space-around;*/
+}
+.iconLink{
+    justify-content: flex-end;
+}
+
+.footer-content{
+    flex-grow: 1;
+    margin: 15px 0;
+}
+
+.footer-icon{
+    flex-grow: 1;
+    margin: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.footer-title{
+    text-decoration: underline;
+}
+
+ul{
+    padding: 0;
+    margin: 0 0px;
+    font-size: .8rem;
+}
+.icons{
+    margin: 10px;
+    color: black;
+}
+
+/* ======================================================================== */
+/* =======================     HOME        ================================ */
+/* ======================================================================== */
+.column{
+    width: 50%;
+    margin: 5px;
+}
+.home img{
+    width: 100%;
+
+}
+
+.item3 {
+    object-fit: cover;
+    object-position: 50% 40%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.item1{
+    grid-row: span 2;
+    grid-column: 1;
+}
+
+.item2{
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.item3{
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.grid div{
+        margin: auto;
+}
+
+
+
+
+/* ======================================================================== */
+/* =======================        MENU  CSS   ============================= */
+/* ======================================================================== */
+.containerMenu{
+    margin: 0px auto 20px auto;
+    max-width:800px;
+    box-sizing: border-box;
+    /*justify-content: center;*/
+}
+.menu{
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    margin: 0 20px;
+    font-size: 13px;
+    min-width: 250px;
+}
+
+.header{
+    margin: 30px 60px 13px;
+    /*margin: 10px 5px 0 5%;*/
+}
+
+/*.item{ */
+/*    margin: 4px 15% 4px; */
+/*}*/
+
+/*GRID MENU START*/
+.item {
+    display: grid;
+    margin: 10px 60px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-row: repeat(2, 1fr);
+}
+
+.dish_name {
+    grid-column: 1 / 4;
+    font-weight: bolder;
+}
+
+.dish_description {
+    grid-row: 2/ 3;
+    grid-column: 1 /4;
+}
+
+.dish_price {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
     
+    justify-self: end;
+}
+/*GRID MENU END*/
+
+
+
+.column_menu_left{
+    width: 90%;
+    float: left;
+}
+
+.column_menu_right{
+    width: 8%;
+    float: right;
+}
+
+.price{
+    font-weight: 200;
+    margin: auto auto
+}
+
+
+h2{
+    margin: 0;
+}
+
+/* Gradient transparent - color - transparent */
+
+.s2 {
+    border: 0;
+    height: 1.35px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    margin-top: 10px;
+    width: 100%;
+}
+
+.description{
+    text-align: center;
+    font-size: .7rem;
+    margin-top: 10px;
+}
+.row {
+  display: flex;
+}
+
+/* ======================================================================== */
+/* ======================= CONTACT US FORM    ============================= */
+/* ======================================================================== */
+.contact{
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.left{
+    width: 25%;
+    margin: 0 2px;
+    min-width: 300px;
+    max-width: 700px;
+}
+
+.info{
+    text-align: center;
+
+}
+
+
+.address, .telephone, .hours{
+    margin: 10px;
+}
+
+.infoDivide{
+    width: 50%;
+}
+
+
+.googleMaps{
+    margin: 30px 0;
+}
+
+.emailContainer{
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: 900px;
+    width: 50%;
+
+}
+.emailForm{
+    width: 100%;
+
+}
+.form{
+     width: 100%;   
+     margin: 8px 0;
+}
+textarea{
+    height: 250px;
+    resize: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .header{
+        margin: 10px 20px;
+    }
+    
+    
+    .item {
+        margin: 10px 20px;
+    }
 }

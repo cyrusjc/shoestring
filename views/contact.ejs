@@ -1,9 +1,54 @@
 <% include partials/header%>
 
-<div class="container">
+<div class="container contact">
 
-    <h1> Contacts</h1>
-    <p> #420 No. 69 Rd, Swag Avenue</p>
+    <div class ="left">
+        <div class="info">
+            <div class = "address">
+                #180-4611 No.6 Rd <br>
+                Richmond, B.C
+            </div>
+            <hr class = "infoDivide">
+            <div class ="telephone">
+                <p> (604)232-0900 </p>
+            </div>
+            <hr class ="infoDivide">
+            <div class = "hours"> 
+                <p> Tues-Sun:  5pm to 10pm</p>
+            </div>
+            
+        </div>
+        
+    
+    
+        <div class ="googleMaps" >
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5855.123155617651!2d-123.07199274881783!3d49.17853178727228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486759e6c21d885%3A0x5e2ef173da2a3c86!2sThe+Shoestring+Cafe!5e0!3m2!1sen!2sca!4v1563493642575!5m2!1sen!2sca"  height = "300px" width =" 100%"frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+ 
+        <div class="emailContainer">
+            <h2> Contact us!</h2>
+            <p> Have a question? Please feel free to send us an email!</p>
+            <div class="emailForm">
+                <form method="POST" action="https://formspree.io/cyrus.cheung123@gmail.com">
+                        <div >
+                            <input class = "form" type ="text" name="name" placeholder="name"></textarea>
+                        </div>
+                        <div>
+                            <input class = "form" type="email" name="email" placeholder="Your email address ">
+                        </div>
+                        <div >
+                            <input class = "form" type ="text" name="title" placeholder="Subject"></textarea>
+                        </div>
+                        
+                        <div>
+                            <textarea class = "form" name="message" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit">Email Now</button>
+                </form>
+            </div>        
+        </div>
+   </div>
 </div>
 
 <% include partials/footer%>

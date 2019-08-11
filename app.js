@@ -1,27 +1,72 @@
-// initializing Express
-var express     = require("express");
-var app         = express();
+const URL = 'https://sheets.googleapis.com/v4/spreadsheets/1zbPRvjDdmllUi1wYpUUL1ZN_jYVy1wJNgVSzMlkh8kw/values/A2%3AC70?key=AIzaSyDeFJrnQQBOteknFzXurUyicAATOtvpoaQ';
+var menu = [];
+
+const express     = require("express");
+const app         = express();
+const request     = require('request');
+const bodyParser    = require("body-parser");  
+
+
 app.use(express.static("public"));              // allows use of static .css files
+app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");                  // allows including .ejs without suffix
 
-// bodyParser for requests since they come back in string file.
-var bodyParser  = require("body-parser");
-app.use(bodyParser.urlencoded({extended:true}));
+//=================================================
+//================== TEST CODE ===================
+const fs = require('fs');
+const readline = require('readline');
+const {google} = require('googleapis');
+const googlReadAndUpdate = require('./googleAPI/credentials')
+// googlReadAndUpdate.readandupdate();
+//=================================================
+//=================================================
+
+// ==========UPDATES OUR MENU ON STARTUP===============
+request(URL, function(error, response, body){
+        if(error){
+            console.log("Something went wrong!" + error);
+        } else {
+            if(response.statusCode ==200){
+                menu =JSON.parse(body).values;
+            }
+        }
+    });
 
 app.get("/", function(req,res){
-    res.render("home")
+    res.render("home");
+});
+
+app.get("/about", function(req,res){
+    res.render("about");
 });
 
 app.get("/menu", function(req,res){
-    res.render("menu")
+    res.render("menu",{menu:menu});
+});
+
+app.get("/menu/update" ,function(req,res){
+    request(URL, function(error, response, body){
+        if(error){
+            console.log("Something went wrong!" + error);
+        } else {
+            if(response.statusCode ==200){
+                menu =JSON.parse(body).values;
+                res.redirect("/menu");
+            }
+        }
+    });
+});
+
+app.get("/menu", function(req,res){
+    
 });
 
 app.get("/contact", function(req,res){
-    res.render("contact")
+    res.render("contact");
 });
 
 //starting server
 app.listen(8080,function(){
     console.log("Shoestring Cafe has been started!");
-})
+});
 
