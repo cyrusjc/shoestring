@@ -1,10 +1,12 @@
-===================================================================================================================
-===================================================================================================================
-Design Choice??
+-- INCOMPLETE --
 
-About me
-Menu
-Contact
+all the backend + front end for shoestring.cafe
+
+Hobby projected hosted on AWS Lightsail.
+
+
+
+
 
 Method of retrieving menu:
     Google Sheets
