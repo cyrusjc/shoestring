@@ -125,7 +125,7 @@ p{
 
 .footer-icon{
     flex-grow: 1;
-    margin: 15px;
+    margin: 0;
     width: 90px;
     display: flex;
     justify-content: flex-end;
@@ -310,6 +310,7 @@ h2{
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
+     height: calc(100vh - 307px);
 }
 
 .left{
