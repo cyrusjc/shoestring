@@ -1,6 +1,6 @@
 -- INCOMPLETE --
 
-all the backend + front end for shoestring.cafe
+all the backend + front end for https://shoestring.cafe
 
 Hobby projected hosted on AWS Lightsail.
 
