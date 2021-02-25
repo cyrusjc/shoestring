@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
     int addrlen = sizeof(address);
     
     printf("Starting.....\n");
-    char *hello = "HTTP/1.1 200 OK\nContent-Type: text/plain\nContent-Length: 12\n\nHello world!";
+    char *hello = "Hello from Shoestring.cafe!";
     
     // Creating socket file descriptor
     // int server_fd = socket(domain, type, protocol);
