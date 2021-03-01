@@ -68,5 +68,6 @@ app.get("/contact", function(req,res){
 //starting server
 app.listen(8080,function(){
     console.log("Shoestring Cafe has been started!");
+
 });
 
