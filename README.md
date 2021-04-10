@@ -8,11 +8,3 @@ The Menu page uses google sheets API to fetch and display data. The sheet in que
 
 Wanted to use a database where anyone can easily change menu items/price so even the non techy people can change it.
 
-
-Method of retrieving menu:
-    Google Sheets
-        1) Entering data into a sheet then reading 
-        2) https://docs.google.com/spreadsheets/d/145tlw2Ke55loXVjo9CfjHaCeZM1b5cISBoB9ZVvGu6U/edit#gid=0
-    
-            Everytime /menu/update is executed, authorize, fetch, display.
-
